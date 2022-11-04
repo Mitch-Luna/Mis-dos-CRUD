@@ -4,7 +4,6 @@ import controller from './controller';
 
 const router = Router();
 
-
 router.get("/", requireAuth, async (req: Request, res: Response, next: NextFunction) => {
     const productos = await controller.list();
     res.json(productos);
